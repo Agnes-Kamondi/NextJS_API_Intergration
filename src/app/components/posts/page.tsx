@@ -19,7 +19,7 @@ const Posts = () => {
         );
     }
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+        <div className="p-5 w-full">
             {posts.length > 0 ? (
                 posts.map(post => (
                     <PostsCard

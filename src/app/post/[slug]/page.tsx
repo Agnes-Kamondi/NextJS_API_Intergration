@@ -1,8 +1,7 @@
 "use client"
 import { useParams } from 'next/navigation';
 import useSinglePost from '@/app/hooks/useSinglePost';
-import PostCard from '@/app/components/postCard';
-
+import PostCard from '../../components/postCard';
 
 const Post = () => {
     const { slug } = useParams();

@@ -10,23 +10,24 @@ const PostCard = ({ singlePost }: PostCardProps) => {
   const handleCancelViewFullPost = () => {
     router.push(`/components/posts`);
   };
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-100">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 gap-5">
       <div className="max-w-2xl w-full bg-white rounded-lg shadow-xl overflow-hidden">
         <div className="p-8">
-          <h2 className="text-3xl font-bold mb-4 text-indigo-800">{singlePost.title}</h2>
+          <h2 className="text-3xl font-bold mb-4 text-black-800">{singlePost.title}</h2>
           <p className="text-gray-600 mb-6">{singlePost.body}</p>
           <div className="flex justify-center space-x-6 mb-6">
-            <button className="flex items-center space-x-2 text-pink-500 hover:text-pink-600 transition">
-              <span>:heart:</span>
+            <button className="flex items-center space-x-2 text-pink-500">
+              <span>❤️</span>
               <span>{singlePost.reactions.likes}</span>
             </button>
-            <button className="flex items-center space-x-2 text-gray-500 hover:text-gray-600 transition">
-              <span>broken_heart:</span>
+            <button className="flex items-center space-x-2 text-gray-500">
+              <span>💔</span>
               <span>{singlePost.reactions.dislikes}</span>
             </button>
-            <button className="flex items-center space-x-2 text-blue-500 hover:text-blue-600 transition">
-              <span>eye</span>
+            <button className="flex items-center space-x-2 text-blue-500">
+              <span>👀</span>
               <span>{singlePost.views}</span>
             </button>
           </div>
@@ -42,7 +43,7 @@ const PostCard = ({ singlePost }: PostCardProps) => {
           </div>
           <button
             onClick={handleCancelViewFullPost}
-            className="w-full bg-red-600 text-white py-2 px-4 rounded-md"
+            className="w-1/4 bg-blue-600 text-white py-2 px-4 rounded-md ml-56"
           >
             Back to Posts
           </button>
@@ -51,11 +52,5 @@ const PostCard = ({ singlePost }: PostCardProps) => {
     </div>
   );
 };
+
 export default PostCard;
-
-
-
-
-
-
-
